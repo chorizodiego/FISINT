@@ -1,0 +1,289 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 15, 2015, 5:04:55 PM
+    Author     : DIEGO
+*/
+
+img, p, ul, li, span, h1, h2, h3, h4, div {
+    margin:0;
+    padding:0;
+}
+* {
+    padding:0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+:focus {
+    outline-style:none;
+    outline-width:0;
+}
+img {border:0;}
+
+
+body {font-family: Arial, Helvetica, sans-serif; background-color:#080808; font-size: 12px; color:#56565b;}
+.clear {clear:both;}
+
+/* Main Containers */
+.top {width:100%; padding-top: 10%;}
+.top .center {margin: 0 auto; width:500px; position: relative;}
+.mid {width:100%;}
+.mid .center {margin: 0 auto; width:220px; color:#56565b;}
+
+/* Main Menu List */
+.menu {padding-top: 20px; text-align:center;}
+.menu ul {display: inline-block; padding:0px; list-style: none; overflow: hidden;}
+.menu ul li {float:left;}
+.menu ul li a {font-size:12px;color:#56565b;text-align:center;text-decoration:none;line-height:34px; padding-left:13px; padding-right:13px; display:block;}
+.menu ul li a:hover {color:#ffffff!important;}
+
+.active {color:#ffffff!important;}
+
+.content {color: #ffffff; padding: 0px; font-size: 12px; margin-top:20px;}
+
+.forgotp a {font-size:12px; color:#E2E2E2!important; text-decoration:none!important;}
+.forgotp {text-align:center;}
+.text {font-size:12px; color:#E2E2E2!important; text-align:center; /* width: 310px; */ }
+.titletext {font-weight: bold;color:#ffffff;}
+
+.layout {font-size:12px; color:#E2E2E2!important; border-spacing: 0px 5px;}
+.layout td {width:115px;} /* For IE8 support */
+
+.auth_form {color:#56565b;}
+.form_user {height:20px; width:220px;background-color: #ffffff; border:none; color:#000; text-align:center; font-weight: bold;}
+.form_pass { height:20px; width:220px; background-color: #ffffff; border:none; color:#000; text-align:center;}
+
+
+/* Make Placeholder Text Black (Login Username & Password Fields) */
+.form_user::-webkit-input-placeholder {color:#080808; font-weight: normal;}
+.form_user:-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 18- */ 
+.form_user::-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 19+ */
+.form_user:-ms-input-placeholder {color:#080808; font-weight: normal;}
+.form_pass::-webkit-input-placeholder {color:#080808;}
+.form_pass:-moz-placeholder {color:#080808;} /* Firefox 18- */ 
+.form_pass::-moz-placeholder {color:#080808;} /* Firefox 19+ */
+.form_pass:-ms-input-placeholder {color:#080808;}
+
+
+.submit { height:20px; width:220px; border:none; background-color:#66666c; text-decoration:none; color:#000000; font-weight: bold; float:left; font-size: 11px; }
+.submit:hover {background-color:#3b8eff;}
+
+.reg_user {height:20px; width:220px; background-color: #ffffff; border:none; color:#000; text-align:center; font-weight: bold;}
+.reg_email { height:20px; width:220px; background-color: #ffffff; border:none; color:#000; text-align:center;}
+.reg_pass {height:20px; width:220px; background-color: #ffffff; border:none; color:#000; text-align:center;}
+.reg_cpass { height:20px; width:220px; background-color: #ffffff; border:none; color:#000; text-align:center;}
+tbody label {color:#56565b;}
+
+/* Make Placeholder Text Black (Register Username & Password Fields) */
+.reg_user::-webkit-input-placeholder {color:#080808; font-weight: normal;}
+.reg_user:-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 18- */ 
+.reg_user::-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 19+ */
+.reg_user:-ms-input-placeholder {color:#080808; font-weight: normal;}
+.reg_email::-webkit-input-placeholder {color:#080808; font-weight: normal;}
+.reg_email:-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 18- */ 
+.reg_email::-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 19+ */
+.reg_email:-ms-input-placeholder {color:#080808; font-weight: normal;}
+.reg_pass::-webkit-input-placeholder {color:#080808; font-weight: normal;}
+.reg_pass:-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 18- */ 
+.reg_pass::-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 19+ */
+.reg_pass:-ms-input-placeholder {color:#080808; font-weight: normal;}
+.reg_cpass::-webkit-input-placeholder {color:#080808; font-weight: normal;}
+.reg_cpass:-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 18- */ 
+.reg_cpass::-moz-placeholder {color:#080808; font-weight: normal;} /* Firefox 19+ */
+.reg_cpass:-ms-input-placeholder {color:#080808; font-weight: normal;}
+
+.hidden { display: none; }
+
+.invalid, .warning, .error, .new { color: #a11d22; font-size: 12px; font-weight: bold;}
+
+.info { color:#56565b; font-weight: bold; }
+
+.notice {font-size: 12px; color:#56565b;}
+.notice strong {color:#ad1c2d;font-size: 13px;}
+
+strong.important_text { color: #a11d22; font-weight: bold; font-size: 12px; }
+
+strong.important_text_alt { color: green; font-weight: bold; font-size: 14px; }
+
+a,
+a:visited,
+a:active { color: #ffffff; text-decoration: none; font-weight: bold; }
+
+a:hover { color: #a11d22; text-decoration: none; font-weight: bold; }
+
+
+/* Logo Animation - Fade In */
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.logo {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.logo {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+@keyframes example {
+    from {left: 50%;}
+    to {left: 29%;}
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    margin:-120px 0 0 -120px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.guia {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    margin:-120px 0 0 -120px;
+	opacity: 0;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes example {
+    from {left:50%}
+    to {left:30%}
+}
+
+/* The element to apply the animation to */
+@keyframes color-me-in {
+  0% {
+    background: white;
+  }
+  /* Adding a step in the middle */
+  50% {
+    background: #00274c;
+  }
+  100% {
+    background: white;
+  }
+}
+
+.mover{
+	animation: color-me-in 5s infinite;
+}
+
+/* Sticky Footer */
+html, body {height: 100%; width:100%;} /* Width to center entire page in IE8 */
+
+#wrap {min-height: 100%; width: 100%;}
+
+#main {overflow:auto;
+       padding-bottom: 30px;}  /* must be same height as the footer */
+
+#footer {position: relative;
+         margin-top: -30px; /* negative value of footer height */
+         height: 30px;
+         clear:both;
+         text-align: center;}
+
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+  
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:0;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(clouds3.png) repeat top center;
+    z-index:0;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}

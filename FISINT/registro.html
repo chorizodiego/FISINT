@@ -1,0 +1,94 @@
+<!--
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+-->
+<html>
+    <head>
+		<meta charset="utf-8">
+        <title>Login :: FISINT : Física Interactiva</title>
+        <link rel="stylesheet" type="text/css" href="../FISINT/login.css" />
+		
+		
+    </head>
+    <body>
+		<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+        <div id="wrap">
+            <div class="top">
+	
+				<div style="position: relative; left: 0; top: 0;">
+					<div class="mover" style="position: relative; top: 0; left: 0;"> <img class="image" src="../FISINT/rotate.png" alt="" ><div>
+					<center><a><img src="../FISINT/logo.png" width="500" height="162" style="position: relative; top: 0; left: 0;"/></center> </a>
+					
+				</div>
+            </div>
+            <div class="mid">
+                <div class="center">
+                    <div class="menu">
+                        <ul>
+                            <li><a class="active">Crear Cuenta</a>
+							
+							
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="content">
+                        <form class="auth_form" name="login" id="loginform" method="POST" action="/RegistrarCuenta">
+                            <table class="layout" border="0">
+							
+								
+                                <tr>
+                                    <td colspan="2">
+                                        <input class="form_user" type="text" name="user"
+                                                           id="username" class="inputtext" required="required" maxlength="50"
+                                                           autofocus="autofocus"
+                                                           placeholder="Usuario" />
+                                    </td>
+                                </tr>
+								
+								
+								
+                                <tr>
+                                    <td colspan="2">
+                                        <input class="form_pass" type="password"
+                                                           name="password" id="password" class="inputtext" required="required"
+                                                           maxlength="20" pattern=".{1,100}" placeholder="Contraseña" />
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td colspan="2">
+                                        <input class="form_user" type="text" name="correo"
+                                                           id="correo" class="inputtext" required="required" maxlength="50"
+                                                           autofocus="autofocus"
+                                                           placeholder="Correo" />
+                                    </td>
+                                </tr>
+								
+								
+								
+                                <tr><td colspan="2">&nbsp</td></tr>
+                                <tr>
+                                    <td><input type="submit" name="login" value="Registrar Cuenta" class="submit" /></td>
+                                <div class="clear"></div>
+                                </tr>
+                            </table>
+                        </form>
+						
+						<form class = "auth_form" method="POST" action="/" class="inline">
+						  <input type="hidden" name="extra_submit_param" value="extra_submit_value">
+						  <button type="submit" name="submit_param" value="submit_value" class="submit">
+							Volver
+						  </button>
+						</form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
