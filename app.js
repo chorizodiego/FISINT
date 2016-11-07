@@ -35,7 +35,7 @@ connection.connect(function(err) {
 
 
 ///////////////////////////////////
-// RPTURN WEBPAGES
+// RETURN WEBPAGES
 ///////////////////////////////////
 
 //Return Home GET
@@ -65,7 +65,7 @@ app.post('/Login', urlencodedParser, function (req, res) {
 		usuario = req.body.user;
 		console.log(result);
 		if(result[0].grupo == 0) res.sendFile('encuesta.html',{'root': __dirname + '/FISINT'});
-		else res.sendFile('asdf.html',{'root': __dirname + '/FISINT'});
+		else res.sendFile('index.html',{'root': __dirname + '/FISINT'});
 		
 	} 
 	else res.sendFile('error_login.html',{'root': __dirname + '/FISINT'});
@@ -74,7 +74,7 @@ app.post('/Login', urlencodedParser, function (req, res) {
 })
 
 app.get('/asdf.html',function(req,res){
-	if(logged) res.sendFile('asdf.html',{'root': __dirname + '/FISINT'});
+	if(logged) res.sendFile('index.html',{'root': __dirname + '/FISINT'});
 	else res.sendFile('login.html',{'root': __dirname + '/FISINT'});
 	
 })
@@ -115,6 +115,6 @@ app.post('/EnviarEncuesta', urlencodedParser, function (req, res) {
 	//res.end(JSON.stringify(response))
 	connection.query('update usuarios set grupo = 1 where usuarios.nombre_u = ?', [usuario], function(err, result) {
 		if (err) throw err
-		res.sendFile('asdf.html',{'root': __dirname + '/FISINT'});
+		res.sendFile('index.html',{'root': __dirname + '/FISINT'});
 	})
 })
