@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>FISINT: Fisica Interactiva</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../FISINT/bootstrap.min.css">
+	<script src="http//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+<div class="jumbotron myJumbotron text-center">
+	
+  <h1>Modificar Contenido</h1>
+</div>
+
+<div id="container" ng-app='two_way' ng-controller='two_way_control'>
+
+		
+
+
+      <div class="row" ng-repeat="data in profile_pictures">
+        <div class=".col-sm-6 .col-md-5 .col-lg-6" >
+          <h4 style="padding:10px;">{{data.titulo}}</h4><hr>
+          <p style="padding:10px;">
+            {{data.url_contenido}}
+          </p>
+
+          
+		  
+		  
+		  <div class="content">
+                        <form class="auth_form" name="login" id="loginform" method="POST" action="/BorrarContenido">
+                                    <input type="submit" name="login" value="Borrar" class="submit" />
+									<input type="hidden" name="id_borrar" value={{data.id}}>
+                        </form>
+
+
+          </div>
+		
+		
+      </div>
+    </div>
+	</div>
+  
+</div>
+
+<div class="container">
+<form action="/AdminPanel" method="POST"> 
+
+<button type="submit" class="btn btn-success">Volver</button>
+
+</form>
+</div>
+
+</body>
+</html>

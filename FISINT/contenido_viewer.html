@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>FISINT: Fisica Interactiva</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../FISINT/bootstrap.min.css">
+	<script src="http//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+<div class="jumbotron myJumbotron text-center">
+	
+  <h1>Modificar Contenido</h1>
+</div>
+
+<div class="container" ng-app='two_way' ng-controller='two_way_control'>
+
+	<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Previa</th>
+		<th>Unidad</th>
+		<th>URL de Referencia</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="data in profile_pictures">
+        <td><img src={{data.url_contenido}} class="img-circle" style="width:100px;height:100px;"></td>
+		<td><p>{{data.temasid}}<p></td>
+		<td>{{data.url_contenido}}</td>
+		<td><form class="auth_form" name="login" id="loginform" method="POST" action="/ModificarContenido">
+						<button type="submit" class = "btn btn-danger" name="id_borrar" value={{data.id}} />Borrar Contenido</button>
+                        </form></td>
+		
+      </tr>
+		
+		
+		<tr>
+		<form action="/SubirArchivo" method="POST" enctype="multipart/form-data">
+
+			<td><input type="file" name="image"> </td>
+			<td><input type="text" name="id_unidad" placeholder="Ingrese la Unidad" class="inputtext" required="required"/></td>
+			<td></td>
+			<td><input type="submit" class = "btn btn-success" value="Subir Archivo"></td>
+		</form>
+  
+		
+		</tr>
+    </tbody>
+	
+	
+		
+
+
+     
+</div>
+
+<div class="container">
+<form action="/AdminPanel" method="POST"> 
+
+<button type="submit" class="btn btn-success">Volver</button>
+
+</form>
+</div>
+
+</body>
+</html>

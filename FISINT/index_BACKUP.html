@@ -1,0 +1,53 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FISINT - Física Interactiva</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+  <link rel="stylesheet" href="../FISINT/estilo.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable, #draggable2, #draggableVideo" ).draggable();
+	$( "#draggable, #draggable2, #draggableVideo" ).resizable({
+		maxWidth: 700,
+		minWidth: 350,
+		aspectRatio: true
+    });
+	$( "#set div" ).draggable({ stack: "#set div" });
+  } );
+  </script>
+</head>
+<body>
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+<div id="set">
+	<div id="draggableVideo" class="ui-widget-content">
+	<video controls="controls" poster="../FISINT/media/max.jpg" width="100%" height="">
+		<source src="../FISINT/media/potencial1.mp4" type="video/mp4" />
+		<img alt="Potencial Electrico 1" src="../FISINT/media/max.jpg" width="100%" height="" title="No video playback capabilities, please download the video below" />
+	</video>
+	Presentación: Potencial Eléctrico I
+	</div>
+
+	<div id="draggable" class="ui-widget-content">
+		<img src="../FISINT/media/potencial.png" width="100%" />
+		<a href="../FISINT/media/Potencial Electrico.pdf">
+			<span class="link-spanner"></span>
+		</a>
+		Sears Zemanski: Potencial Eléctrico
+	</div>
+
+	<div id="draggable2" class="ui-widget-content">
+		<a href="../FISINT/media/FIS120_Guia_2.pdf">
+			<span class="link-spanner"></span>
+		</a>
+		<img src="../FISINT/media/guia.png" width="100%"/>
+		Guía 2
+	</div>
+</div>
+</body>
+</html>

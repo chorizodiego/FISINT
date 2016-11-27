@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>FISINT: Fisica Interactiva</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../FISINT/bootstrap.min.css">
+	<script src="http//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+<div class="jumbotron myJumbotron text-center">
+	
+  <h1>Modificar Usuarios</h1>
+</div>
+
+<div class="container" ng-app='two_way' ng-controller='mostrar_usuarios'>
+
+	<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre de Usuario</th>
+        <th>Correo</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="data in profile_pictures">
+        <td>{{data.nombre_u}}</td>
+        <td>{{data.correo}}</td>
+		<td><form action="/ModificarUsuarios" method="POST"><button type="submit" class="btn btn-danger" name="correo" value={{data.correo}}>Eliminar Usuario</button></form></td>
+		
+      </tr>
+
+    </tbody>
+  </table>
+  
+  </div>
+  
+</div>
+
+<div class="container">
+<form action="/AdminPanel" method="POST"> 
+
+<button type="submit" class="btn btn-success">Volver</button>
+
+</form>
+</div>
+
+</body>
+</html>
