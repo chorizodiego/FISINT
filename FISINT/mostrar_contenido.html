@@ -1,0 +1,45 @@
+<html>
+
+  <head>
+    <title>FISINT: Fisica Interactiva</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+	<link rel="stylesheet" href="../FISINT/estilo.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+	
+
+	
+	
+  </head>
+<body>
+
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+<div id="set" ng-app='two_way' ng-controller='mostrar_contenido'>
+
+<!-- 	<div id="draggableVideo" class="ui-widget-content">
+		<a href="media/potencial1.mp4"><span class="link-spanner"></span></a>
+		<img src="media/max.jpg" width="100%"/>
+	Presentación: Potencial Eléctrico I
+	</div> -->
+	
+	<div ng-repeat="data in profile_pictures" items-drag> 
+	<asdf>
+	<div id="draggable" class="ui-widget-content" >
+		
+		<a href={{data.url_contenido}}><span class="link-spanner"></span></a>
+		<img src={{data.url_contenido}} width="100%"/>
+		{{data.titulo}}
+		
+	</div>
+	</asdf>
+	</div>
+</div>
+</body>
+</html>

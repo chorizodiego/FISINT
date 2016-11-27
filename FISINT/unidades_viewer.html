@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>FISINT: Fisica Interactiva</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../FISINT/bootstrap.min.css">
+	<script src="http//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="core.js"></script>
+</head>
+<body>
+<div class="jumbotron myJumbotron text-center">
+	
+  <h1>Modificar Unidades</h1>
+</div>
+
+<div class="container" ng-app='two_way' ng-controller='mostrar_unidades'>
+
+	<table class="table table-striped">
+    <thead>
+      <tr>
+		<th>Nombre</th>
+		<th>Descripcion</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="data in profile_pictures">
+        <td><p>{{data.nombre_t}}</p></td>
+		<td>{{data.descripcion}}</td>
+		<td><form action="/ModificarUnidades" method="POST">
+			
+			<button type="submit" class="btn btn-danger" name="id_borrar" value={{data.id}}>Borrar Unidad</button>
+
+		</form>
+		</td>
+		
+      </tr>
+		<tr>
+		<form class="auth_form" name="login" id="loginform" method="POST" action="/AgregarUnidad">
+		
+                                    <td>
+                                        <input class="form_user" type="text" name="nombre"
+                                                           id="username" class="inputtext" required="required" maxlength="50"
+                                                           autofocus="autofocus"
+                                                           placeholder="Nombre" />
+                                    </td>
+									
+									<td>
+                                        <input class="form_pass" type="text"
+                                                           name="descripcion" id="descripcion" class="inputtext" required="required"
+                                                           maxlength="2000" pattern=".{1,100}" placeholder="Ingrese una Descripción" />
+                                    </td>
+									
+									<td> <button type="submit" class="btn btn-success" name="nuevo" value={{data.id}}>Agregar Unidad</button> </td>
+
+        </form>
+		</tr>
+    </tbody>
+  </table>
+		
+
+
+     
+</div>
+
+<div class="container">
+<form action="/AdminPanel" method="POST"> 
+
+<button type="submit" class="btn btn-success">Volver</button>
+
+</form>
+</div>
+
+</body>
+</html>
