@@ -1,7 +1,7 @@
-app.controller('two_way_control',function($scope,$http,$interval){
-  load_pictures();
+app.controller('modificar_contenido',function($scope,$http,$interval){
+  modificar_contenido();
 
-  function load_pictures(){
+  function modificar_contenido(){
   $http.get('http://localhost:3000/load').success(function(data){    
     $scope.profile_pictures=data;
   });
